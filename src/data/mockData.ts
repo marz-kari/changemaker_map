@@ -210,14 +210,15 @@ export const mockUsers: User[] = [
   }
 ];
 
-// Gallery images based on the attached photos - using placeholder URLs that should be replaced with actual uploaded images
+// Gallery images - uses images from public/images/ folder
+// To add your own images: place them in public/images/ with these exact names
 export const mockGalleryImages: GalleryImage[] = [
   // Bayside Food Distribution
   {
     id: '1',
     eventId: '1',
     eventName: 'Bayside Food Distribution',
-    url: '/images/bayside-food-1.jpg', // Replace with actual uploaded image
+    url: '/images/bayside-food-1.jpg',
     caption: 'USD Volunteers at Bayside Community Center Food Distribution',
     date: '2024-12-06',
     userId: '1'
@@ -226,7 +227,7 @@ export const mockGalleryImages: GalleryImage[] = [
     id: '2',
     eventId: '1',
     eventName: 'Bayside Food Distribution',
-    url: '/images/bayside-food-2.jpg', // Replace with actual uploaded image
+    url: '/images/bayside-food-2.jpg',
     caption: 'Sorting canned goods for distribution',
     date: '2024-12-06',
     userId: '2'
@@ -236,7 +237,7 @@ export const mockGalleryImages: GalleryImage[] = [
     id: '3',
     eventId: '4',
     eventName: 'Pancakes Serving Up Hope',
-    url: '/images/pancakes-1.jpg', // Replace with actual uploaded image
+    url: '/images/pancakes-1.jpg',
     caption: 'Community Kitchen - Pancake Breakfast volunteers',
     date: '2024-12-06',
     userId: '3'
@@ -245,7 +246,7 @@ export const mockGalleryImages: GalleryImage[] = [
     id: '4',
     eventId: '4',
     eventName: 'Pancakes Serving Up Hope',
-    url: '/images/pancakes-2.jpg', // Replace with actual uploaded image
+    url: '/images/pancakes-2.jpg',
     caption: 'Serving pancakes to the community',
     date: '2024-12-06',
     userId: '1'
@@ -255,7 +256,7 @@ export const mockGalleryImages: GalleryImage[] = [
     id: '5',
     eventId: '6',
     eventName: 'USD Tree Planting Day',
-    url: '/images/tree-planting-1.jpg', // Replace with actual uploaded image
+    url: '/images/tree-planting-1.jpg',
     caption: 'USD students planting trees on campus',
     date: '2024-11-15',
     userId: '1'
@@ -264,7 +265,7 @@ export const mockGalleryImages: GalleryImage[] = [
     id: '6',
     eventId: '6',
     eventName: 'USD Tree Planting Day',
-    url: '/images/tree-planting-2.jpg', // Replace with actual uploaded image
+    url: '/images/tree-planting-2.jpg',
     caption: 'Team effort at USD Tree Planting Day',
     date: '2024-11-15',
     userId: '4'
