@@ -35,6 +35,15 @@ export default function Leaderboard({ users, currentUserId, showFriendsOnly = fa
     return 'bg-white border-gray-100';
   };
 
+  const getFriendName = (user: User, friendId: string): string => {
+    if (user.friendNames && user.friendNames[friendId]) {
+      return user.friendNames[friendId];
+    }
+    // Fallback: find the friend in the users array
+    const friend = users.find(u => u.id === friendId);
+    return friend ? friend.username : `Friend #${friendId}`;
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">
@@ -86,4 +95,3 @@ export default function Leaderboard({ users, currentUserId, showFriendsOnly = fa
     </div>
   );
 }
-

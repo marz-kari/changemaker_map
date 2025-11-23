@@ -6,7 +6,7 @@ A beautiful, modern website for USD students to discover and engage with sustain
 
 ## Features
 
-- 🗺️ **Interactive Map** - Explore sustainability events across San Diego with an interactive map
+- 🗺️ **Interactive Map** - Explore changemaking opportunities across San Diego with an interactive map
 - 📸 **Event Gallery** - Browse photos from past events organized by event
 - 👤 **User Profiles** - Track your points, badges, events attended, and hours logged
 - 🏆 **Leaderboards** - Compete with friends and see global rankings
@@ -135,7 +135,7 @@ changemaker_map/
 
 ## Contact
 
-For questions, email: changemakermap@gmail.com
+For questions, email: changemakermap@sandiego.edu
 
 ## License
 

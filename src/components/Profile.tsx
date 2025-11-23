@@ -74,14 +74,17 @@ export default function Profile({ user, onEdit }: ProfileProps) {
         <h3 className="text-xl font-bold text-gray-800 mb-4">Friends</h3>
         {user.friends.length > 0 ? (
           <div className="flex flex-wrap gap-3">
-            {user.friends.map((friendId) => (
-              <div
-                key={friendId}
-                className="px-4 py-2 bg-green-50 text-green-700 rounded-lg font-medium"
-              >
-                Friend #{friendId}
-              </div>
-            ))}
+            {user.friends.map((friendId) => {
+              const friendName = user.friendNames?.[friendId] || `Friend #${friendId}`;
+              return (
+                <div
+                  key={friendId}
+                  className="px-4 py-2 bg-green-50 text-green-700 rounded-lg font-medium"
+                >
+                  {friendName}
+                </div>
+              );
+            })}
           </div>
         ) : (
           <p className="text-gray-500">No friends yet. Start connecting with others!</p>
@@ -90,4 +93,3 @@ export default function Profile({ user, onEdit }: ProfileProps) {
     </div>
   );
 }
-

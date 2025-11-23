@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-400 via-emerald-500 to-teal-500 text-white py-20">
+      <section className="bg-gradient-to-br from-usd-teal via-teal-500 to-emerald-500 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
             Changemaker Map
@@ -16,18 +16,18 @@ export default function Home() {
             Discover where change happens.
           </p>
           <p className="text-lg md:text-xl text-green-50 max-w-2xl mx-auto mb-8">
-            Connect with sustainability events in San Diego. Earn points, make friends, and create positive change in your community.
+            Connect with changemaking opportunities in San Diego. Earn points, make friends, and create positive change in your community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/map"
-              className="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-all hover:shadow-xl hover:scale-105"
+              className="px-8 py-4 bg-white text-usd-teal rounded-lg font-semibold hover:bg-teal-50 transition-all hover:shadow-xl hover:scale-105"
             >
               Explore the Map
             </Link>
             <Link
               to="/profile"
-              className="px-8 py-4 bg-green-600/20 backdrop-blur-sm text-white border-2 border-white rounded-lg font-semibold hover:bg-green-600/30 transition-all"
+              className="px-8 py-4 bg-usd-teal/20 backdrop-blur-sm text-white border-2 border-white rounded-lg font-semibold hover:bg-usd-teal/30 transition-all"
             >
               Create Account
             </Link>
@@ -41,7 +41,7 @@ export default function Home() {
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Interactive Event Map</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Explore sustainability events across San Diego. Click on markers to learn more about each event.
+              Explore changemaking opportunities across San Diego. Click on markers to learn more about each event.
             </p>
           </div>
           <div className="h-[500px] rounded-lg overflow-hidden shadow-2xl">
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="text-center mt-6">
               <Link
                 to="/profile"
-                className="text-green-600 hover:text-green-700 font-semibold"
+                className="text-usd-teal hover:text-teal-700 font-semibold"
               >
                 View Full Leaderboard →
               </Link>
@@ -79,7 +79,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Ways to Get Involved</h2>
             <p className="text-xl text-gray-600">
-              Discover other San Diego sustainability initiatives
+              Discover other San Diego changemaking initiatives
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -87,13 +87,13 @@ export default function Home() {
               <div className="text-4xl mb-4">🌱</div>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">USD Changemaker Hub</h3>
               <p className="text-gray-600 mb-4">
-                Connect with USD's sustainability initiatives and resources.
+                Connect with USD's changemaking initiatives and resources.
               </p>
               <a
                 href="https://www.usdengage.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-600 hover:text-green-700 font-semibold"
+                className="text-usd-teal hover:text-teal-700 font-semibold"
               >
                 Learn More →
               </a>
@@ -106,7 +106,7 @@ export default function Home() {
               </p>
               <Link
                 to="/map"
-                className="text-green-600 hover:text-green-700 font-semibold"
+                className="text-usd-teal hover:text-teal-700 font-semibold"
               >
                 Find Events →
               </Link>
@@ -115,11 +115,11 @@ export default function Home() {
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">Community Events</h3>
               <p className="text-gray-600 mb-4">
-                Join Greater San Diego sustainability initiatives and make a difference.
+                Join Greater San Diego changemaking initiatives and make a difference.
               </p>
               <Link
                 to="/map"
-                className="text-green-600 hover:text-green-700 font-semibold"
+                className="text-usd-teal hover:text-teal-700 font-semibold"
               >
                 Explore Map →
               </Link>
@@ -137,31 +137,31 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">Our Mission</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Changemaker Map provides awareness to sustainability events in San Diego through an interactive map. 
-                  Our platform helps USD students easily discover and engage with environmental initiatives, making 
-                  sustainable action more accessible than ever.
+                  Changemaker Map provides awareness to changemaking opportunities in San Diego through an interactive map. 
+                  Our platform helps USD students easily discover and engage with community service initiatives, making 
+                  positive action more accessible than ever.
                 </p>
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">The Problem</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  USD students want to be sustainable, but our school has many resources that aren't easily accessible. 
-                  Students have to dive deep into scattered websites and school-affiliated social media pages to find events.
+                  USD students want to make a difference, but our school has many resources that aren't easily accessible. 
+                  Students have to dive deep into scattered websites and school-affiliated social media pages to find changemaking opportunities.
                 </p>
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">Our Solution</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  We're building a comprehensive platform with all sustainability resources in one place. Through our 
+                  We're building a comprehensive platform with all changemaking resources in one place. Through our 
                   interactive map, point system, and social features, we make it easy for students to discover, attend, 
-                  and be rewarded for participating in sustainability events.
+                  and be rewarded for participating in changemaking opportunities.
                 </p>
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">Partnership</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Changemaker Map is proudly partnered with USD's Changemaker Hub, working together to create a more 
-                  sustainable campus and community.
+                  engaged campus and community.
                 </p>
               </div>
             </div>
@@ -177,10 +177,10 @@ export default function Home() {
             We'd love to hear from you! Reach out to us at:
           </p>
           <a
-            href="mailto:changemakermap@gmail.com"
-            className="text-2xl text-green-600 hover:text-green-700 font-semibold hover:underline"
+            href="mailto:changemakermap@sandiego.edu"
+            className="text-2xl text-usd-teal hover:text-teal-700 font-semibold hover:underline"
           >
-            changemakermap@gmail.com
+            changemakermap@sandiego.edu
           </a>
         </div>
       </section>

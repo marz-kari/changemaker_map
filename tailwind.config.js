@@ -7,17 +7,34 @@ export default {
   theme: {
     extend: {
       colors: {
+        // USD Primary Colors
+        'usd-founders': '#003b70',      // Founders Blue
+        'usd-immaculata': '#0074c8',    // Immaculata Blue
+        'usd-torero': '#75bee9',        // Torero Blue
+        'usd-white': '#ffffff',         // Alcala White
+        
+        // USD Accent Colors
+        'usd-purple': '#5a2b81',        // PMS 7680
+        'usd-teal': '#00a499',          // PMS 7711 (Green accent - focus)
+        'usd-brown': '#a17a68',         // PMS 4725
+        'usd-gray': '#646469',          // PMS Cool Gray 8
+        'usd-red': '#92002d',           // PMS 202
+        'usd-orange': '#c25219',        // PMS 167
+        'usd-yellow': '#eeaa2b',        // PMS 2007
+        'usd-green': '#728c1f',         // PMS 2306
+        
+        // Green accent colors (using USD Teal as primary)
         primary: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
+          50: '#e6f7f6',
+          100: '#b3ebe8',
+          200: '#80dfda',
+          300: '#4dd3cc',
+          400: '#1ac7be',
+          500: '#00a499',  // USD Teal
+          600: '#00837a',
+          700: '#00625b',
+          800: '#00413c',
+          900: '#00201d',
         },
       },
       fontFamily: {
@@ -41,4 +58,3 @@ export default {
   },
   plugins: [],
 }
-

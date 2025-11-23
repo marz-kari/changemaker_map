@@ -11,11 +11,11 @@
 
 @layer components {
   .gradient-primary {
-    @apply bg-gradient-to-r from-green-400 via-emerald-500 to-teal-500;
+    @apply bg-gradient-to-r from-usd-teal via-teal-500 to-emerald-500;
   }
   
   .gradient-soft {
-    @apply bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50;
+    @apply bg-gradient-to-br from-green-50 via-teal-50 to-emerald-50;
   }
   
   .card-hover {
@@ -23,11 +23,10 @@
   }
   
   .btn-primary {
-    @apply px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105;
+    @apply px-6 py-3 bg-gradient-to-r from-usd-teal to-teal-600 text-white rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105;
   }
   
   .btn-secondary {
-    @apply px-6 py-3 bg-white text-green-600 border-2 border-green-500 rounded-lg font-semibold transition-all duration-300 hover:bg-green-50 hover:shadow-md;
+    @apply px-6 py-3 bg-white text-usd-teal border-2 border-usd-teal rounded-lg font-semibold transition-all duration-300 hover:bg-teal-50 hover:shadow-md;
   }
 }
-

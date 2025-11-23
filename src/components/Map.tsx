@@ -15,22 +15,54 @@ interface MapProps {
   events: Event[];
   selectedType?: 'USD' | 'UM' | 'Greater SD' | 'All';
   onEventClick?: (event: Event) => void;
+  selectedDays?: number;
+  selectedLocation?: string;
 }
 
-export default function Map({ events, selectedType = 'All', onEventClick }: MapProps) {
+export default function Map({ events, selectedType = 'All', onEventClick, selectedDays, selectedLocation }: MapProps) {
   const [filteredEvents, setFilteredEvents] = useState(events);
+  const [isInteractive, setIsInteractive] = useState(false);
 
   useEffect(() => {
-    if (selectedType === 'All') {
-      setFilteredEvents(events);
-    } else {
-      setFilteredEvents(events.filter(event => event.type === selectedType));
-    }
-  }, [events, selectedType]);
+    let filtered = events;
 
-  // San Diego center coordinates
-  const center: [number, number] = [32.7157, -117.1611];
-  const zoom = 12;
+    // Filter by type
+    if (selectedType !== 'All') {
+      filtered = filtered.filter(event => event.type === selectedType);
+    }
+
+    // Filter by days
+    if (selectedDays) {
+      const today = new Date();
+      const futureDate = new Date();
+      futureDate.setDate(today.getDate() + selectedDays);
+      filtered = filtered.filter(event => {
+        const eventDate = new Date(event.date);
+        return eventDate >= today && eventDate <= futureDate;
+      });
+    }
+
+    // Filter by location (San Diego subsets)
+    if (selectedLocation && selectedLocation !== 'All') {
+      filtered = filtered.filter(event => {
+        const address = event.location.address.toLowerCase();
+        if (selectedLocation === 'Downtown') {
+          return address.includes('downtown') || address.includes('92101');
+        } else if (selectedLocation === 'USD Campus') {
+          return address.includes('usd') || address.includes('campus') || address.includes('92110');
+        } else if (selectedLocation === 'North County') {
+          return address.includes('92111') || address.includes('comstock');
+        }
+        return true;
+      });
+    }
+
+    setFilteredEvents(filtered);
+  }, [events, selectedType, selectedDays, selectedLocation]);
+
+  // USD center coordinates
+  const center: [number, number] = [32.7715, -117.1886];
+  const zoom = 14;
 
   // Create custom green icon for markers
   const greenIcon = new L.Icon({
@@ -42,19 +74,38 @@ export default function Map({ events, selectedType = 'All', onEventClick }: MapP
     shadowSize: [41, 41]
   });
 
+  const handleMapClick = () => {
+    setIsInteractive(true);
+  };
+
   return (
-    <div className="w-full h-full rounded-lg overflow-hidden shadow-lg">
+    <div className="w-full h-full rounded-lg overflow-hidden shadow-lg relative">
+      {!isInteractive && (
+        <div
+          onClick={handleMapClick}
+          className="absolute inset-0 z-[1000] bg-black/20 backdrop-blur-sm flex items-center justify-center cursor-pointer hover:bg-black/30 transition-colors"
+        >
+          <div className="bg-white/90 rounded-lg p-6 shadow-xl text-center max-w-md mx-4">
+            <p className="text-lg font-semibold text-gray-800 mb-2">Click to interact with the map</p>
+            <p className="text-sm text-gray-600">Explore changemaking opportunities across San Diego</p>
+          </div>
+        </div>
+      )}
       <MapContainer
         center={center}
         zoom={zoom}
         style={{ height: '100%', width: '100%' }}
-        scrollWheelZoom={true}
+        scrollWheelZoom={isInteractive}
+        dragging={isInteractive}
+        touchZoom={isInteractive}
+        doubleClickZoom={isInteractive}
+        zoomControl={isInteractive}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         />
-        {filteredEvents.map((event) => (
+        {isInteractive && filteredEvents.map((event) => (
           <Marker
             key={event.id}
             position={[event.location.lat, event.location.lng]}
@@ -85,4 +136,3 @@ export default function Map({ events, selectedType = 'All', onEventClick }: MapP
     </div>
   );
 }
-
