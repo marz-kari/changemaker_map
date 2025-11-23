@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-usd-teal via-teal-500 to-emerald-500 text-white py-20">
+      <section className="bg-gradient-to-br from-teal-500 via-emerald-500 to-teal-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
             Changemaker Map
@@ -21,13 +21,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/map"
-              className="px-8 py-4 bg-white text-usd-teal rounded-lg font-semibold hover:bg-teal-50 transition-all hover:shadow-xl hover:scale-105"
+              className="px-8 py-4 bg-white text-primary-500 rounded-lg font-semibold hover:bg-teal-50 transition-all hover:shadow-xl hover:scale-105"
             >
               Explore the Map
             </Link>
             <Link
               to="/profile"
-              className="px-8 py-4 bg-usd-teal/20 backdrop-blur-sm text-white border-2 border-white rounded-lg font-semibold hover:bg-usd-teal/30 transition-all"
+              className="px-8 py-4 bg-primary-500/20 backdrop-blur-sm text-white border-2 border-white rounded-lg font-semibold hover:bg-primary-500/30 transition-all"
             >
               Create Account
             </Link>
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="text-center mt-6">
               <Link
                 to="/profile"
-                className="text-usd-teal hover:text-teal-700 font-semibold"
+                className="text-primary-500 hover:text-teal-700 font-semibold"
               >
                 View Full Leaderboard →
               </Link>
@@ -93,7 +93,7 @@ export default function Home() {
                 href="https://www.usdengage.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-usd-teal hover:text-teal-700 font-semibold"
+                className="text-primary-500 hover:text-teal-700 font-semibold"
               >
                 Learn More →
               </a>
@@ -106,7 +106,7 @@ export default function Home() {
               </p>
               <Link
                 to="/map"
-                className="text-usd-teal hover:text-teal-700 font-semibold"
+                className="text-primary-500 hover:text-teal-700 font-semibold"
               >
                 Find Events →
               </Link>
@@ -119,7 +119,7 @@ export default function Home() {
               </p>
               <Link
                 to="/map"
-                className="text-usd-teal hover:text-teal-700 font-semibold"
+                className="text-primary-500 hover:text-teal-700 font-semibold"
               >
                 Explore Map →
               </Link>
@@ -178,7 +178,7 @@ export default function Home() {
           </p>
           <a
             href="mailto:changemakermap@sandiego.edu"
-            className="text-2xl text-usd-teal hover:text-teal-700 font-semibold hover:underline"
+            className="text-2xl text-primary-500 hover:text-teal-700 font-semibold hover:underline"
           >
             changemakermap@sandiego.edu
           </a>
