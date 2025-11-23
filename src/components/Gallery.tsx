@@ -32,7 +32,7 @@ export default function Gallery({ images, onImageClick }: GalleryProps) {
       <div className="space-y-4">
         <button
           onClick={() => setSelectedEvent(null)}
-          className="flex items-center space-x-2 text-primary-500 hover:text-teal-700 font-medium"
+          className="flex items-center space-x-2 text-teal-600 hover:text-teal-700 font-medium"
         >
           <span>←</span>
           <span>Back to Gallery</span>
