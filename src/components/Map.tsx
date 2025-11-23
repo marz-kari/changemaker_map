@@ -105,7 +105,7 @@ export default function Map({ events, selectedType = 'All', onEventClick, select
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         />
-        {isInteractive && filteredEvents.map((event) => (
+        {isInteractive && filteredEvents.length > 0 && filteredEvents.map((event) => (
           <Marker
             key={event.id}
             position={[event.location.lat, event.location.lng]}

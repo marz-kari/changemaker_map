@@ -1,0 +1,5 @@
+providers = ["nixpacks"]
+phases.setup = "npm install"
+phases.build = "npm run build"
+start = "npm run serve"
+
