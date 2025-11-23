@@ -210,15 +210,15 @@ export const mockUsers: User[] = [
   }
 ];
 
-// Gallery images - uses images from public/images/ folder
-// To add your own images: place them in public/images/ with these exact names
+// Gallery images - using placeholder images that match the event descriptions
+// You can replace these URLs with your actual uploaded images in public/images/
 export const mockGalleryImages: GalleryImage[] = [
-  // Bayside Food Distribution
+  // Bayside Food Distribution - Food distribution/volunteer images
   {
     id: '1',
     eventId: '1',
     eventName: 'Bayside Food Distribution',
-    url: '/images/bayside-food-1.jpg',
+    url: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=600&fit=crop',
     caption: 'USD Volunteers at Bayside Community Center Food Distribution',
     date: '2024-12-06',
     userId: '1'
@@ -227,17 +227,17 @@ export const mockGalleryImages: GalleryImage[] = [
     id: '2',
     eventId: '1',
     eventName: 'Bayside Food Distribution',
-    url: '/images/bayside-food-2.jpg',
+    url: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=600&fit=crop',
     caption: 'Sorting canned goods for distribution',
     date: '2024-12-06',
     userId: '2'
   },
-  // Pancakes Serving Up Hope
+  // Pancakes Serving Up Hope - Community kitchen/pancake breakfast images
   {
     id: '3',
     eventId: '4',
     eventName: 'Pancakes Serving Up Hope',
-    url: '/images/pancakes-1.jpg',
+    url: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&h=600&fit=crop',
     caption: 'Community Kitchen - Pancake Breakfast volunteers',
     date: '2024-12-06',
     userId: '3'
@@ -246,17 +246,17 @@ export const mockGalleryImages: GalleryImage[] = [
     id: '4',
     eventId: '4',
     eventName: 'Pancakes Serving Up Hope',
-    url: '/images/pancakes-2.jpg',
+    url: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=600&fit=crop',
     caption: 'Serving pancakes to the community',
     date: '2024-12-06',
     userId: '1'
   },
-  // USD Tree Planting Day
+  // USD Tree Planting Day - Tree planting/volunteer images
   {
     id: '5',
     eventId: '6',
     eventName: 'USD Tree Planting Day',
-    url: '/images/tree-planting-1.jpg',
+    url: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=600&fit=crop',
     caption: 'USD students planting trees on campus',
     date: '2024-11-15',
     userId: '1'
@@ -265,7 +265,7 @@ export const mockGalleryImages: GalleryImage[] = [
     id: '6',
     eventId: '6',
     eventName: 'USD Tree Planting Day',
-    url: '/images/tree-planting-2.jpg',
+    url: 'https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?w=800&h=600&fit=crop',
     caption: 'Team effort at USD Tree Planting Day',
     date: '2024-11-15',
     userId: '4'
